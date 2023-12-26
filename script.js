@@ -22,7 +22,7 @@ const mangoFloat = [
   {
     class: "premium",
     innerText:
-      "Charannnnn! Here's your Premium Mango Float. 🤤 Enjoy while it lasts, bai!",
+      "Charannnnn! Here's your Premium Mango Float. 🤩 Enjoy while it lasts, bai!",
     img: ["images/premium.webp"],
   },
 ];
