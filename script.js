@@ -53,6 +53,8 @@ pickBtn.addEventListener("click", () => {
         <div class="img-container">
         ${imageElements.join("")}
         </div>`;
+      
+      button.classList.remove("clicked");
     }
   }
 
