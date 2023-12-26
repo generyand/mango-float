@@ -16,7 +16,7 @@ const mangoFloat = [
   },
   {
     class: "regular",
-    innerText: "Wieee! Here's your Regular Mango Float. Hope you like it!",
+    innerText: "Wieee! Here's your Regular Mango Float. Hope you like it! 🥰",
     img: ["images/regular.webp"],
   },
   {
