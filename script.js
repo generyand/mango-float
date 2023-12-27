@@ -51,12 +51,11 @@ pickBtn.addEventListener("click", () => {
       respondContainer.innerHTML = `
         <p class="text-respond">${foo[0].innerText}</p>
         <div class="img-container">
-        ${imageElements.join("")}
+          ${imageElements.join("")}
         </div>`;
-      
+
       button.classList.remove("clicked");
     }
   }
-
   pickBtn.classList.remove("active");
 });
