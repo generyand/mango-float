@@ -158,8 +158,8 @@ img {
 
 .copyright {
   position: absolute;
-  bottom: 4px;
-  left: 4px;
+  bottom: .75rem;
+  left: .75rem;
   font-size: 1rem;
 }
 
