@@ -69,7 +69,8 @@ strong {
   border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
   border-style: solid;
   border-width: 2px;
-  box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
+  /* box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px; */ /* Turn this on if paubos ang focus */
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
   box-sizing: border-box;
   color: #41403e;
   cursor: pointer;
@@ -104,7 +105,9 @@ strong {
 }
 
 .button:focus {
-  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+  /* box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px; */ /* Turn this on if pa ubos ang focus */
+  box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
+  transform: translate3d(0, -2px, 0);
   border: 3px solid var(--yellow);
 }
 
@@ -158,9 +161,9 @@ img {
 
 .copyright {
   position: absolute;
-  bottom: .75rem;
-  left: .75rem;
-  font-size: .75rem;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  font-size: 1rem;
 }
 
 @media (min-width: 768px) {
