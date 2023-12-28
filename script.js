@@ -1,7 +1,6 @@
 (function () {
   "use strict";
 
-  const textRespond = document.querySelector(".text-respond");
   const buttons = document.querySelectorAll(".button");
   const pickBtn = document.querySelector(".pick-btn");
   const respondContainer = document.querySelector(".respond-container");
@@ -9,7 +8,7 @@
   const mangoFloat = [
     {
       class: "cheap",
-      innerText: "Ikaw na bahala assemble ana. Daku naka. 😊",
+      innerText: "Ikaw na bahala jan. Malaki kana 😊",
       img: [
         "images/condensed-milk.webp",
         "images/grahams-cracker.webp",
@@ -49,21 +48,22 @@
           (arr) => button.id == arr["class"]
         );
 
-        let imageElements = pickedChoice[0].img.map((imageSource) => {
-          return `<img src=${imageSource} alt="">`;
-        });
+        const imageElements = pickedChoice[0].img.map(
+          (imageSource) => `<img src=${imageSource} alt="">`
+        );
 
         respondContainer.innerHTML = `
-        <p class="text-respond">${pickedChoice[0].innerText}</p>
-        <div class="img-container">
-          ${imageElements.join("")}
-        </div>`;
+          <p class="text-respond">${pickedChoice[0].innerText}</p>
+          <div class="img-container">
+            ${imageElements.join("")}
+          </div>`;
         button.classList.remove("clicked");
       }
     }
     pickBtn.classList.remove("active");
   });
 
+  /* Added so whenever the user clicks outside of the choices, the pick button becomes inactive */
   document.addEventListener("click", function (event) {
     const isClickedOutsideChoices = () => {
       for (const button of buttons) {
