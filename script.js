@@ -8,7 +8,7 @@
   const mangoFloat = [
     {
       class: "cheap",
-      innerText: "Ikaw na bahala jan. Malaki kana 😊",
+      innerText: "Ikaw na bahala ana. Daku naka 😊",
       img: [
         "images/condensed-milk.webp",
         "images/grahams-cracker.webp",
