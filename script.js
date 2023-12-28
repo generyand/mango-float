@@ -30,6 +30,7 @@ const mangoFloat = [
 for (const button of buttons) {
   button.addEventListener("click", () => {
     pickBtn.classList.add("active");
+
     for (const btn of buttons) {
       btn.classList.remove("clicked");
     }
@@ -41,21 +42,39 @@ for (const button of buttons) {
 pickBtn.addEventListener("click", () => {
   for (const button of buttons) {
     if (button.classList.contains("clicked")) {
-      const foo = mangoFloat.filter((arr) => button.id == arr["class"]);
+      const pickedChoice = mangoFloat.filter(
+        (arr) => button.id == arr["class"]
+      );
 
-      console.log(foo);
-      let imageElements = foo[0].img.map((imageSource) => {
+      let imageElements = pickedChoice[0].img.map((imageSource) => {
         return `<img src=${imageSource} alt="">`;
       });
 
       respondContainer.innerHTML = `
-        <p class="text-respond">${foo[0].innerText}</p>
+        <p class="text-respond">${pickedChoice[0].innerText}</p>
         <div class="img-container">
           ${imageElements.join("")}
         </div>`;
-
       button.classList.remove("clicked");
     }
   }
   pickBtn.classList.remove("active");
+});
+
+document.addEventListener("click", function (event) {
+  const isClickedOutsideChoices = () => {
+    for (const button of buttons) {
+      if (button.contains(event.target)) {
+        return false;
+      }
+    }
+    return true;
+  };
+
+  if (isClickedOutsideChoices()) {
+    for (const button of buttons) {
+      button.classList.remove("clicked");
+    }
+    pickBtn.classList.remove("active");
+  }
 });
