@@ -159,12 +159,12 @@ img {
   animation: popup 1s cubic-bezier(0.18, 1.43, 0.27, 1.08);
 }
 
-.copyright {
+/* .copyright {
   position: absolute;
   bottom: 0.75rem;
   left: 0.75rem;
   font-size: 1rem;
-}
+} */
 
 @media (min-width: 768px) {
   .pick-btn {
